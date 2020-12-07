@@ -1,0 +1,291 @@
+html {
+    height: 100vh;
+}
+
+*{
+    font-family: 'Work Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+.bg {
+    height: 100vh;
+    width: 100%;
+    background: url("../photos/DocBg.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: rgba(29, 33, 61, 0.5);
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.logo{
+    width: 155px;
+}
+.fa-ambulance{
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 30px;
+
+    color: #fff;
+    text-shadow:
+            0 0 5px #fff
+}
+
+nav{
+    flex: 1;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+/*HAMBURGER*/
+ul.sub {
+    position: absolute;
+    z-index: 200;
+    box-shadow: 2px 2px 0 #1C2833;
+    width: auto;
+    display:none;
+    text-align: left;
+    padding: 0;
+}
+
+ul.sub li {
+    float: none;
+    margin: 0;
+}
+
+ul.sub li a {
+    border-bottom: 1px solid #1C2833 ;
+    text-decoration: none;
+}
+
+ul.sub li:last-child a {
+    border-bottom: none;
+}
+
+ul.sub li a:hover {
+    color: #fff;
+    background: rgba(29, 33, 61, 0.5);
+}
+
+ul.primary{
+    padding: 0;
+}
+
+ul.primary li:hover ul {
+    display: flex;
+    flex-direction:column ;
+    background: rgba(29, 33, 61, 0.5);
+}
+
+/* keeps the tab background white */
+ul.primary li:hover a {
+    color: #fff;
+    text-shadow: none;
+}
+
+ul.primary li:hover > a{
+    color: #fff;
+}
+
+ul.primary li a {
+    display: block;
+    padding: 15px 30px;
+    border-right: 1px solid #3D3D3D;
+}
+
+ul.primary li:last-child a {
+    border-right: none;
+}
+
+ul.primary li a:hover {
+    color: #fff;
+}
+
+/*HAMBURGER*/
+nav ul li a:hover{
+    color: #fff;
+    text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #0ff,
+            0 0 80px #0ff,
+            0 0 90px #0ff,
+            0 0 100px #0ff,
+            0 0 150px #0ff;
+}
+
+nav .active{
+    color: #fff;
+    text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #0ff,
+            0 0 80px #0ff,
+            0 0 90px #0ff,
+            0 0 100px #0ff,
+            0 0 150px #0ff;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.user img{
+    width: 30px;
+    /*margin-left: 15px;*/
+    cursor: pointer;
+}
+
+.img_user{
+    font-size: 30px;
+    width: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+nav a , a:focus , .user a:focus , .user a{
+    color: #fff;
+}
+
+a:hover{
+    color: #fff;
+    text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #0ff,
+            0 0 80px #0ff,
+            0 0 90px #0ff,
+            0 0 100px #0ff,
+            0 0 150px #0ff;
+}
+
+.sidebar{
+    width: 155px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(29,31,58,0.5);
+}
+
+.social{
+    width: 20px;
+    display: block;
+    margin: 220px auto 0;
+    text-align: center;
+    align-items: center;
+}
+
+.social a{
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/*Cols*/
+.msg-container{
+    width: 600px;
+    height: 280px;
+    position: absolute;
+    left: 14%;
+    top: 57%;
+    transform: translateY(-50%);
+    color: #fff;
+    overflow: hidden;
+}
+
+.msg-container h1{
+    font-size: 80px;
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+#slider{
+    display: inline-flex;
+}
+
+.msg-col{
+    height: 280px;
+    width: 600px;
+}
+
+.msg-col a{
+  display: inline-block;
+    text-decoration: none;
+    color: #555;
+    background: #fff;
+    font-size: 15px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-top: 25px;
+}
+
+.msg-col a:hover{
+  background: 0;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/*Controller*/
+#slider{
+    display: inline-flex;
+    transition: 0.5s;
+}
+
+.controller{
+    width: 1px;
+    height: 320px;
+    display:block;
+    background: #c0c0c0;
+    position: absolute;
+    top: 55%;
+    right: 50px;
+    transform: translateY(-50%);
+}
+
+#line1 , #line2 , #line3 , #line4{
+    height: 80px;
+    width: 10px;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+#active{
+    width: 5px;
+    height: 80px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+}

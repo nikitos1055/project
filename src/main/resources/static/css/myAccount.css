@@ -1,0 +1,55 @@
+h1 , h2 {
+    color: #fff;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.card{
+    width: auto;
+    height: auto;
+    margin: 0 10px;
+    color: #fff;
+    display: inline-flex;
+}
+
+.card ul{
+    border-bottom: 1px solid;
+    padding: 0 0 10px 0;
+}
+
+.card ul li{
+    list-style: none;
+    display: inline-flex;
+    margin: 0 10px;
+}
+
+.red{
+    width: 120px;
+    height: 30px;
+    background: 0;
+    border: 1px solid #E74C3C ;
+    color: #fff;
+    outline: none;
+}
+.red:hover{
+    background: #E74C3C ;
+}
+
+.green{
+    width: 120px;
+    height: 30px;
+    background: 0;
+    border: 1px solid #2ECC71;
+    color: #fff;
+    outline: none;
+}
+.green:hover{
+    background: #2ECC71;
+
+}

@@ -1,0 +1,322 @@
+/*@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");*/
+
+html {
+    min-height: 100vh;
+}
+
+* {
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.bg1 {
+    height: auto;
+    width: 100%;
+    background: rgb(92, 87, 255);
+    background: linear-gradient(90deg, rgba(92, 87, 255, 1) 36%, rgba(148, 187, 233, 1) 100%);
+    background-size: cover;
+    position: relative;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+
+
+.container , .cards , .container-top{
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    min-height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.account {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    min-height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.active {
+    color: #fff;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+a, a:focus {
+    color: #fff;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: rgba(29, 33, 61, 0.5);
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.all-cards {
+    padding: 90px 10px 10px 165px;
+}
+
+.logo {
+    width: 155px;
+}
+
+.search {
+    margin: 20px 50px 20px 20px;
+}
+
+.search > h3 {
+    font-weight: normal;
+}
+
+.search > h1,
+.search > h3 {
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 1px #0091c2;
+}
+
+.search > div {
+    display: inline-block;
+    position: relative;
+    filter: drop-shadow(0 1px #0091c2);
+    top: -3px;
+}
+
+.search > div:after {
+    content: "";
+    background: white;
+    width: 1px;
+    height: 10px;
+    position: absolute;
+    top: 19px;
+    right: -2px;
+    transform: rotate(135deg);
+}
+
+.search > div > input {
+    color: white;
+    font-size: 10px;
+    background: transparent;
+    width: 3px;
+    height: 3px;
+    padding: 10px;
+    border: solid 1px white;
+    outline: none;
+    border-radius: 50px;
+    transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+    color: #efefef;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+    opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+    width: 250px;
+}
+
+.fa-ambulance {
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 30px;
+
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+}
+
+nav {
+    flex: 1;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.img_user {
+    font-size: 30px;
+    width: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 155px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(29, 31, 58, 0.5);
+}
+
+.social {
+    width: 20px;
+    display: block;
+    margin: 220px auto 0;
+    text-align: center;
+}
+
+.social a{
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.info {
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+    text-align: center;
+}
+
+.doctor-info {
+    display: inline-block;
+    text-align: left;
+}
+
+.doctor {
+    text-align: center;
+    display: inline-block;
+    font-size: 300px;
+    color: #fff;
+}
+
+ul.sub {
+    position: absolute;
+    z-index: 200;
+    box-shadow: 2px 2px 0 #1C2833;
+    width: auto;
+    display:none;
+    text-align: left;
+    padding: 0;
+}
+
+ul.sub li {
+    float: none;
+    margin: 0;
+}
+
+ul.sub li a {
+    border-bottom: 1px solid #1C2833 ;
+    text-decoration: none;
+}
+
+ul.sub li:last-child a {
+    border-bottom: none;
+}
+
+ul.sub li a:hover {
+    color: #fff;
+    background: rgba(29, 33, 61, 0.5);
+}
+
+ul.primary{
+    padding: 0;
+}
+
+ul.primary li:hover ul {
+    display: flex;
+    flex-direction:column ;
+    background: rgba(29, 33, 61, 0.5);
+}
+
+/* keeps the tab background white */
+ul.primary li:hover a {
+    color: #fff;
+    text-shadow: none;
+}
+
+ul.primary li:hover > a{
+    color: #fff;
+}
+
+ul.primary li a {
+    display: block;
+    padding: 15px 30px;
+    border-right: 1px solid #3D3D3D;
+}
+
+ul.primary li:last-child a {
+    border-right: none;
+}
+
+ul.primary li a:hover {
+    color: #fff;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 60px;
+}
