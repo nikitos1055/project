@@ -15,7 +15,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "doctor")
-public class Doctor {
+public class Doctor extends LoginData{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "doctor_id", unique = true, nullable = false)
