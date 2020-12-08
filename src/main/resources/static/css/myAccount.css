@@ -17,7 +17,22 @@ h1{
     color: #fff;
     display: inline-flex;
 }
+.doctor-info ul{
+    display: inline-flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    float: left;
+}
 
+.doctor-info li{
+    display: inline;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    color: #fff;
+    font-size: 35px;
+}
 .card ul{
     border-bottom: 1px solid;
     padding: 0 0 10px 0;
@@ -52,4 +67,11 @@ h1{
 .green:hover{
     background: #2ECC71;
 
+}
+
+.all-meetings{
+    overflow: auto;
+    width: 50%;
+    height: 600px;
+    float: right;
 }

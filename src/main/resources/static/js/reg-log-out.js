@@ -38,7 +38,7 @@ $(document).ready(function () {
                 data: JSON.stringify(userRegistration),
 
                 success: function (data) {
-                    if (data === 200){
+                    if (data === 200) {
                         let finalUrl = '';
                         let url = window.location.href.split("/");
                         for (let i = 0; i < url.length - 1; i++) {
@@ -46,7 +46,7 @@ $(document).ready(function () {
                         }
                         finalUrl += "mainPage.html";
                         window.location.href = finalUrl;
-                    }else {
+                    } else {
                         alert("User with this login already exists.")
                     }
                     console.log(data.status);
@@ -82,7 +82,7 @@ $(document).ready(function () {
                 data: JSON.stringify(user),
 
                 success: function (data) {
-                    if (data === 200){
+                    if (data === 200) {
                         let finalUrl = '';
                         let url = window.location.href.split("/");
                         for (let i = 0; i < url.length - 1; i++) {
@@ -90,7 +90,7 @@ $(document).ready(function () {
                         }
                         finalUrl += "mainPage.html";
                         window.location.href = finalUrl;
-                    }else if (data === 409){
+                    } else if (data === 409) {
                         alert("Password invalid.")
                     } else {
                         alert("User do not exists.")
@@ -105,7 +105,6 @@ $(document).ready(function () {
         }
     });
 });
-
 
 
 //                                FOR DOCTOR
@@ -144,7 +143,7 @@ $(document).ready(function () {
                 data: JSON.stringify(doctorRegistration),
 
                 success: function (data) {
-                    if (data === 200){
+                    if (data === 200) {
                         let finalUrl = '';
                         let url = window.location.href.split("/");
                         for (let i = 0; i < url.length - 1; i++) {
@@ -152,7 +151,7 @@ $(document).ready(function () {
                         }
                         finalUrl += "mainPage.html";
                         window.location.href = finalUrl;
-                    }else {
+                    } else {
                         alert("Doctor with this login already exists.")
                     }
                     console.log(data.status);
@@ -161,13 +160,7 @@ $(document).ready(function () {
                     alert("error")
                     console.log(data.status)
                 }
-            }).done(function () {
-                let par = "";
-                jQuery.each(doctorRegistration, function (i, doctor) {
-                    par += doctor.firstName + " " + doctor.lastName;
-                });
-                $("p.name-surname").html(par);
-            });;
+            })
         }
     });
 });
@@ -175,17 +168,16 @@ $(document).ready(function () {
 
 //logout for all
 $(document).ready(function () {
-    $("button#logout").click(function () {
+    $("a.logout").click(function () {
         $.get("logout", function (data) {
-            if (data !== "") {
-                let finalUrl = "";
-                let url = window.location.href.split("/");
-                for (let i = 0; i < url.length - 1; i++) {
-                    finalUrl += url[i] + "/";
-                }
-                finalUrl += data;
-                window.location.href = finalUrl;
+            let finalUrl = "";
+            let url = window.location.href.split("/");
+            for (let i = 0; i < url.length - 1; i++) {
+                finalUrl += url[i] + "/";
             }
+            finalUrl += "index.html";
+            window.location.href = finalUrl;
         });
     });
 });
+

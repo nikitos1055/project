@@ -44,10 +44,9 @@ body {
     min-height: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
-    text-align: center;
 }
 
 .active {
@@ -142,6 +141,12 @@ a:hover {
     transition: width 0.5s;
 }
 
+.search > div > .btnSend{
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 90px;
+}
+
 .search > div > input::placeholder {
     color: #efefef;
     opacity: 0;
@@ -234,14 +239,13 @@ nav ul li a:hover {
 
 
 .info {
-    width: 100%;
+    width: 50%;
     margin-bottom: 30px;
-    display: block;
-    text-align: center;
+    display: inline-flex;
 }
 
 .doctor-info {
-    display: inline-block;
+    display: inline-flex;
     text-align: left;
 }
 

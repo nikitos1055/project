@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/myAccount.css">
     <link rel="stylesheet" href="css/forAll.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="js/swapMenu.js"></script>
 </head>
 <body>
 <div>
@@ -23,13 +28,13 @@
                 </ul>
             </nav>
             <div class="user">
-                <p>User Test</p>
+                <p class="name-surname"></p>
                 <ul class="primary">
                     <li>
                         <a href="MyAccount.html" class="fa fa-user img_user"></a>
                         <ul class="sub">
                             <li><a href="MyAccount.html">My account</a></li>
-                            <li><a href="">Logout</a></li>
+                            <li><a class="logout" href="index.html">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -44,19 +49,18 @@
             </div>
         </div>
 
+        <div class="container">
         <div class="account">
             <div class="info">
                 <div class="doctor-info">
-                    <h1>My account: </h1>
-                    <h2>Name: Alex</h2>
-                    <h2>Surname: Ant</h2>
-                    <h2>Email: alex.ant@gmail.com</h2>
-                    <h2>Address: Ukraine</h2>
+                    <ul>
+                        <li><h1>My account: </h1></li>
+                        <li>Name: <h2 class="name"></h2> </li>
+                        <li>Surname: <h2 class="surname"></h2> </li>
+                        <li>Login: <h2 class="login"></h2> </li>
+                    </ul>
                 </div>
 
-                <div class="doctor">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                </div>
             </div>
             <div class="all-meetings">
                 <h1>My meetings: </h1>
@@ -154,6 +158,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </div>

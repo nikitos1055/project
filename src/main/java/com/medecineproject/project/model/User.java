@@ -28,9 +28,6 @@ public class User extends LoginData{
     @Column(name = "user_surname")
     private String surname;
 
-    @Column(name = "user_address")
-    private String address;
-
     @Column(name = "user_role")
     private Role role = Role.USER;
 

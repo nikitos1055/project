@@ -29,7 +29,7 @@ public class LoginController {
     private final UserService serviceUser = new UserServiceImpl();
 
     @PostMapping("/login")
-    public int loginDoctor(@RequestBody UserDTO userDTO, HttpServletRequest req, HttpServletResponse resp) {
+    public int loginDoctor(@RequestBody UserDTO userDTO, HttpServletRequest req) {
         System.out.println(userDTO);
         if (!Objects.isNull(serviceUser.readByLogin(userDTO.getLogin()))) {
             User user = serviceUser.readByLogin(userDTO.getLogin());
@@ -52,7 +52,7 @@ public class LoginController {
     }
 
     @GetMapping("/getData")
-    public LoginData getData(HttpServletRequest req, HttpServletResponse resp) {
+    public LoginData getData(HttpServletRequest req) {
         String login = req.getSession().getAttribute("login").toString();
 
         if (!Objects.isNull(serviceUser.readByLogin(login))) {

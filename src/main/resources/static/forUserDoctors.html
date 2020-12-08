@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/forAll.css">
     <link rel="stylesheet" href="css/cardsStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/allDoctors.js"></script>
+    <script src="js/swapMenu.js"></script>
 </head>
 <body>
 <div class="bg1">
@@ -25,18 +31,19 @@
 
         <div class="search">
             <div>
-                <input type="text" placeholder="Search . . ." required>
+                <input type="text" name="category" placeholder="Search . . ." required>
+                <div class="btnSend" id="send">SEND</div>
             </div>
         </div>
 
         <div class="user">
-            <p>User Test</p>
+            <p class="name-surname"></p>
             <ul class="primary">
                 <li>
                     <a href="MyAccount.html" class="fa fa-user img_user"></a>
                     <ul class="sub">
                         <li><a href="MyAccount.html">My account</a></li>
-                        <li><a href="">Logout</a></li>
+                        <li><a class="logout" href="index.html">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -74,62 +81,13 @@
         </div>
 
         <h2>ALL DOCTORS: </h2>
-        <div class="container">
-            <!--ALL CARDS-->
-            <div class="element-card">
-                <div class="front-facing">
-                    <i class="fa fa-user-md" aria-hidden="true"></i>
-                    <h1 class="abr">Doctor: Alan</h1>
-                    <p class="title">Surgery</p>
-                </div>
-                <div class="back-facing">
-                    <p>Copper is a chemical element with symbol Cu (from Latin: cuprum) and atomic number 29. It is a
-                        soft, malleable, and ductile metal with very high thermal and electrical conductivity.</p>
-                    <p><a class="btn" href="Zapusatys.html">More info</a></p>
-                </div>
-            </div>
-
-            <div class="element-card">
-                <div class="front-facing">
-                    <i class="fa fa-user-md pink" aria-hidden="true"></i>
-                    <h1 class="abrPink">Doctor: Olena</h1>
-                    <p class="titlePink">Surgery</p>
-                </div>
-                <div class="back-facing">
-                    <p>Copper is a chemical element with symbol Cu (from Latin: cuprum) and atomic number 29. It is a
-                        soft, malleable, and ductile metal with very high thermal and electrical conductivity.</p>
-                    <p><a class="btn" href="Zapusatys.html">More info</a></p>
-                </div>
-            </div>
-
-            <div class="element-card">
-                <div class="front-facing">
-                    <i class="fa fa-user-md" aria-hidden="true"></i>
-                    <h1 class="abr">Doctor: Alan</h1>
-                    <p class="title">Surgery</p>
-                </div>
-                <div class="back-facing">
-                    <p>Copper is a chemical element with symbol Cu (from Latin: cuprum) and atomic number 29. It is a
-                        soft, malleable, and ductile metal with very high thermal and electrical conductivity.</p>
-                    <p><a class="btn" href="Zapusatys.html" >More info</a></p>
-                </div>
-            </div>
-            <div class="element-card">
-                <div class="front-facing">
-                    <i class="fa fa-user-md" aria-hidden="true"></i>
-                    <h1 class="abr">Doctor: Alan</h1>
-                    <p class="title">Surgery</p>
-                </div>
-                <div class="back-facing">
-                    <p>Copper is a chemical element with symbol Cu (from Latin: cuprum) and atomic number 29. It is a
-                        soft, malleable, and ductile metal with very high thermal and electrical conductivity.</p>
-                    <p><a class="btn" href="Zapusatys.html" >More info</a></p>
-                </div>
-            </div>
+       <div class="container" id="allCardsDoctors"></div>
+</div>
             <!--        -->
         </div>
     </div>
 </div>
+
 <script src="js/cardFlip.js"></script>
 </body>
 </html>
