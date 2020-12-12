@@ -8,10 +8,11 @@
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/myAccount.css">
-    <link rel="stylesheet" href="css/forAll.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
-    <script src="js/swapMenu.js"></script>
+    <script src="js/doctorCabinet.js"></script>
+    <script src="js/cabinet-fill.js"></script>
+    <script src="js/cabinet.js"></script>
 </head>
 <body>
 <div>
@@ -49,22 +50,45 @@
             </div>
         </div>
 
+        <!--        CABINET         -->
         <div class="container">
-        <div class="account">
-            <div class="info">
-                <div class="doctor-info">
-                    <ul>
-                        <li><h1>My account: </h1></li>
-                        <li>Name: <h2 class="name"></h2> </li>
-                        <li>Surname: <h2 class="surname"></h2> </li>
-                        <li>Login: <h2 class="login"></h2> </li>
-                    </ul>
-                </div>
 
+            <div class="info" id="user">
+                <h1>My account: </h1>
+                <ul>
+                    <li class="nameIn">Name: <input class="inStyle" id="name" type="text" name="name"
+                                                    placeholder="Name"></li>
+                    <li class="nameIn">Surname: <input class="inStyle" id="surname" type="text" name="surname"
+                                                       placeholder="Surname">
+                    </li>
+                    <li class="nameIn">Login: <input readonly class="inStyle" id="login" type="text" name="login"
+                                                     placeholder="Login"></li>
+                        <button class="btn" id="updateBtnUser">Change info</button>
+                </ul>
             </div>
+
+            <div class="info" id="doctor">
+                <h1>My account: </h1>
+
+                <ul>
+                    <li class="nameIn">Name: <input class="inStyle" id="nameD" type="text" name="name"
+                                                    placeholder="Name"></li>
+                    <li class="nameIn">Surname: <input class="inStyle" id="surnameD" type="text" name="surname"
+                                                       placeholder="Surname">
+                    </li>
+                    <li class="nameIn">Login: <input readonly class="inStyle" id="loginD" type="text" name="login"
+                                                     placeholder="Login"></li>
+                    <li class="nameIn">Experience: <input class="inStyle" id="experienceD" type="number"
+                                                          name="experience" placeholder="Experience"></li>
+                    <li class="nameIn">Login: <input class="inStyle" id="categoryD" type="text" name="category"
+                                                     placeholder="Category"></li>
+                        <button class="btn" id="updateBtnDoc">Change info</button>
+                </ul>
+            </div>
+
             <div class="all-meetings">
                 <h1>My meetings: </h1>
-                <div class="meetings">
+                <div class="meetings ">
                     <!--  Some cards-->
                     <div class="card">
                         <ul>
@@ -159,8 +183,8 @@
                 </div>
             </div>
         </div>
-        </div>
     </div>
 </div>
+
 </body>
 </html>

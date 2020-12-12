@@ -1,28 +1,20 @@
 package com.medecineproject.project.controller;
 
-import com.google.gson.Gson;
 import com.medecineproject.project.dto.DoctorRegistrationDTO;
 import com.medecineproject.project.dto.UserRegistrationDTO;
 import com.medecineproject.project.model.Doctor;
-import com.medecineproject.project.model.LoginData;
 import com.medecineproject.project.model.User;
-import com.medecineproject.project.model.UserLogin;
 import com.medecineproject.project.service.DoctorService;
 import com.medecineproject.project.service.impl.DoctorServiceImpl;
 import com.medecineproject.project.service.impl.UserServiceImpl;
-import com.sun.net.httpserver.Authenticator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.util.Objects;
 
 @Slf4j
@@ -63,4 +55,6 @@ public class RegistrationController {
         }
         return 500;
     }
+
+
 }

@@ -8,12 +8,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DoctorRepository  extends JpaRepository<Doctor, Long>,
-        CrudRepository<Doctor , Long> {
+public interface DoctorRepository extends JpaRepository<Doctor, Long>,
+        CrudRepository<Doctor, Long> {
 
-        List<Doctor> findAllByCategory(String category);
+    List<Doctor> findAllByCategory(String category);
 
-        Doctor readByLogin(String login);
+    Doctor readByLogin(String login);
 
-        Doctor readTopByNumOfMeetingsWithPatients(Integer numOfMeetingsWithPatients);
+    Doctor readTopByNumOfMeetingsWithPatients(Integer numOfMeetingsWithPatients);
 }

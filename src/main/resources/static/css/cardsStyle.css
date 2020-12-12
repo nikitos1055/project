@@ -31,15 +31,8 @@ i {
 
 
 .element-card:hover, .card-best:hover {
-    /*transform: rotatey(20deg) translatex(0px) translatey(0px);*/
     transform: rotatey(-180deg) translatex(0px) translatey(0px);
-    transition: 1s;
-}
-
-.element-card.open, .card-best.open {
-    width: 300px;
-    height: 400px;
-    transform: rotatey(-180deg) translatex(0px) translatey(0px);
+    transition: 0.1s;
 }
 
 .front-facing {
@@ -104,7 +97,6 @@ p {
 
 a.btn {
     display: inline-block;
-    background-color: white;
     padding: 5px 15px;
     margin: 20px 0 0 0;
     color: #eee;

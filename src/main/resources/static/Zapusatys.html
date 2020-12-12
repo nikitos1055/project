@@ -7,177 +7,99 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/forAll.css">
-    <link rel="stylesheet" href="css/myAccount.css">
-
+    <link rel="stylesheet" href="css/DoctorPage.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
-    <script src="js/swapMenu.js"></script>
+    <script src="js/allDoctors.js"></script>
+    <script src="js/doctorPage.js"></script>
+    <script src="js/meetings.js"></script>
 </head>
 <body>
-<div class="bg1">
-
-    <div class="navbar">
-        <div class="logo">
-            <span class="fa fa-ambulance"></span>
+<div>
+    <div class="bg1">
+        <div class="navbar">
+            <div class="logo">
+                <span class="fa fa-ambulance"></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="mainPage.html">Home</a></li>
+                    <li><a href="forUserDoctors.html">Choose doctor</a></li>
+                    <li><a href="aboutUs.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user">
+                <p class="name-surname"></p>
+                <ul class="primary">
+                    <li>
+                        <a href="MyAccount.html" class="fa fa-user img_user"></a>
+                        <ul class="sub">
+                            <li><a href="MyAccount.html">My account</a></li>
+                            <li><a class="logout" href="/">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="mainPage.html">Home</a></li>
-                <li><a href="forUserDoctors.html" class="active">Choose doctor</a></li>
-                <li><a href="aboutUs.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="user">
-            <p class="name-surname"></p>
-            <ul class="primary">
-                <li>
-                    <a href="MyAccount.html" class="fa fa-user img_user"></a>
-                    <ul class="sub">
-                        <li><a href="MyAccount.html">My account</a></li>
-                        <li><a class="logout" href="index.html">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
 
-    <div class="sidebar">
-        <div class="social">
-            <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
-            <a href="#" class="fa fa-google" aria-hidden="true"></a>
-            <a href="https://www.instagram.com/niki8ta890/?hl=uk" class="fa fa-instagram" aria-hidden="true"></a>
+        <div class="sidebar">
+            <div class="social">
+                <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+                <a href="#" class="fa fa-google" aria-hidden="true"></a>
+                <a href="https://www.instagram.com/niki8ta890/?hl=uk" class="fa fa-instagram" aria-hidden="true"></a>
+            </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="account">
+        <!--        CABINET         -->
+        <div class="container">
 
             <div class="info">
-                <div class="doctor-info">
-                    <h1>Doctor`s info: </h1>
-                    <h2>Name: Alex</h2>
-                    <h2>Surname: Ant</h2>
-                    <h2>Email: alex.ant@gmail.com</h2>
-                    <h2>Address: Ukraine</h2>
-                </div>
+                <h1>Doctor`s information: </h1>
 
-                <div class="doctor">
-                    <i class="fa fa-user-md" aria-hidden="true"></i>
-                </div>
+                <ul>
+                    <li class="nameIn">Name: <input readonly class="inStyle" id="nameInfo" type="text" name="name"
+                                                    placeholder="Name"></li>
+                    <li class="nameIn">Surname: <input readonly class="inStyle" id="surnameInfo" type="text"
+                                                       name="surname"
+                                                       placeholder="Surname">
+                    </li>
+                    <li class="nameIn">Experience: <input readonly class="inStyle" id="experienceInfo" type="number"
+                                                          name="experience" placeholder="Experience"></li>
+                    <li class="nameIn">Category: <input readonly class="inStyle" id="categoryInfo" type="text"
+                                                        name="category"
+                                                        placeholder="Category"></li>
+                </ul>
             </div>
 
             <div class="all-meetings">
-                <h1>Free time: </h1>
-                <div class="time">
-                    <!--  Some cards-->
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
+                <h1>Create meeting: </h1>
+                <div class="meetings ">
+                    <ul class="form-meeting">
+                        <!--  Some cards-->
 
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <div class="card">
-                        <ul>
-                            <li>Empty time: <span>20:45</span></li>
-                            <li>
-                                <button class="green">Take in</button>
-                            </li>
-                        </ul>
-                    </div>
+                        <li>
+                            <input list="times" class="input-meeting" name="time" id="time" placeholder="Time"></p>
+                            <datalist id="times">
+                                <option value="08:00"></option><option value="08:30"></option>
+                                <option value="09:00"></option><option value="09:30"></option>
+                                <option value="10:00"></option><option value="10:30"></option>
+                                <option value="11:00"></option><option value="11:30"></option>
+                                <option value="12:00"></option><option value="12:30"></option>
+                                <option value="13:00"></option><option value="13:30"></option>
+                                <option value="14:00"></option><option value="14:30"></option>
+                                <option value="15:00"></option><option value="15:30"></option>
+                                <option value="16:00"></option><option value="16:30"></option>
+                                <option value="17:00"></option><option value="17:30"></option>
+                                <option value="18:00"></option>
+                            </datalist>
+                        </li>
+                        <li><button name = "time" id="create-meeting" class="styleBtnMeet">Create</button></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 </body>
 </html>

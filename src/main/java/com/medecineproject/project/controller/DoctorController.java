@@ -6,21 +6,25 @@ import com.medecineproject.project.service.DoctorService;
 import com.medecineproject.project.service.impl.DoctorServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @RestController
 public class DoctorController {
     @Autowired
-    private DoctorService serviceDoctors = new DoctorServiceImpl();
+    private final DoctorService serviceDoctors = new DoctorServiceImpl();
 
     @GetMapping("/doctors")
     public void getAllShops(HttpServletResponse resp) throws IOException {
@@ -29,7 +33,6 @@ public class DoctorController {
             log.error("No records found");
         }
         String jsonData = new Gson().toJson(shops);
-        log.info(String.valueOf(shops));
         log.info("JSON data : " + jsonData);
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
@@ -55,7 +58,7 @@ public class DoctorController {
     @GetMapping("/doctors-top")
     public void getTopDoctor(@PathVariable int number, HttpServletResponse resp) throws IOException {
         Doctor doctor = serviceDoctors.readTopByNumOfMeetingsWithPatients(number);
-        if (Objects.isNull(number)) {
+        if (Objects.isNull(doctor)) {
             log.error("No records found");
         }
         String jsonData = new Gson().toJson(doctor);
@@ -64,5 +67,20 @@ public class DoctorController {
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
         resp.getWriter().write(jsonData);
+    }
+
+    @GetMapping("/doctors/by-id")
+    public Optional<Doctor> getDoctorById(HttpServletRequest req) throws IOException, ServletException {
+        Integer id = Integer.parseInt(req.getSession().getAttribute("idDoctor").toString());
+        log.info(String.valueOf(id));
+        return serviceDoctors.findById(id);
+    }
+
+    @PostMapping("/doctor")
+    public void getDoctor(HttpServletRequest req) throws IOException, ServletException {
+        Integer id = Integer.parseInt(req.getParameter("idDoctor"));
+
+        HttpSession session = req.getSession(true);
+        session.setAttribute("idDoctor", id);
     }
 }

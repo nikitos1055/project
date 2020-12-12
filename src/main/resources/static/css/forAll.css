@@ -13,6 +13,7 @@ body {
 }
 
 .bg1 {
+    min-height: 100vh;
     height: auto;
     width: 100%;
     background: rgb(92, 87, 255);
@@ -200,6 +201,24 @@ nav ul li a:hover {
     0 0 150px #0ff;
 }
 
+ul.search li{
+ margin: 3px;
+}
+.sendBtn{
+    background: rgba(29, 33, 61, 0.5);
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    margin-right: 20px;
+    color: #fff;
+}
+
+.inputSend{
+    width: 200px;
+    height: 30px;
+    outline: none;
+}
 .user {
     display: flex;
     align-items: center;

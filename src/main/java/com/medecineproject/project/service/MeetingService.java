@@ -1,7 +1,6 @@
 package com.medecineproject.project.service;
 
 import com.medecineproject.project.model.Meeting;
-import com.medecineproject.project.model.User;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,4 +15,9 @@ public interface MeetingService {
     Meeting update(Meeting meeting);
 
     void deleteById(long id);
+
+    Meeting readByTime(String time);
+
+    boolean isExists(long id);
+
 }

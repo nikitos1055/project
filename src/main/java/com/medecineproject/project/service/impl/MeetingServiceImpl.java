@@ -6,13 +6,12 @@ import com.medecineproject.project.service.MeetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class MeetingServiceImpl implements MeetingService {
     @Autowired
-    MeetingRepository rep;
+    private MeetingRepository rep;
 
     @Override
     public Meeting save(Meeting meeting) {
@@ -37,5 +36,15 @@ public class MeetingServiceImpl implements MeetingService {
     @Override
     public void deleteById(long id) {
         rep.deleteById(id);
+    }
+
+    @Override
+    public Meeting readByTime(String time) {
+        return rep.readByTime(time);
+    }
+
+    @Override
+    public boolean isExists(long id) {
+        return rep.existsById(id);
     }
 }
