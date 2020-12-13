@@ -13,7 +13,9 @@ public interface DoctorRepository extends JpaRepository<Doctor, Long>,
 
     List<Doctor> findAllByCategory(String category);
 
+    Doctor readTopByNumOfMeetingsWithPatients(Integer numOfMeetingsWithPatients);
+
     Doctor readByLogin(String login);
 
-    Doctor readTopByNumOfMeetingsWithPatients(Integer numOfMeetingsWithPatients);
+    Doctor readById(long id);
 }

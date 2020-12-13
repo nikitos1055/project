@@ -1,6 +1,7 @@
 package com.medecineproject.project.service;
 
 import com.medecineproject.project.model.Doctor;
+import com.medecineproject.project.model.Meeting;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,7 +21,9 @@ public interface DoctorService {
 
     List<Doctor> findAllByCategory(String category);
 
-    Doctor readTopByNumOfMeetingsWithPatients(Integer numOfMeetingsWithPatients);
+    Doctor readTop();
 
     Doctor readByLogin(String login);
+
+    Doctor readById(long id);
 }

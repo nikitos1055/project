@@ -1,5 +1,6 @@
 package com.medecineproject.project.service;
 
+import com.medecineproject.project.model.Doctor;
 import com.medecineproject.project.model.User;
 
 import java.util.List;
@@ -19,4 +20,6 @@ public interface UserService {
     User readByLogin(String login);
 
     boolean isExists(long id);
+
+    User readById(long id);
 }

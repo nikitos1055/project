@@ -55,6 +55,4 @@ public class RegistrationController {
         }
         return 500;
     }
-
-
 }

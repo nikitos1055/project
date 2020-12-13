@@ -15,7 +15,6 @@
     <script src="js/cabinet.js"></script>
 </head>
 <body>
-<div>
     <div class="bg1">
         <div class="navbar">
             <div class="logo">
@@ -35,7 +34,7 @@
                         <a href="MyAccount.html" class="fa fa-user img_user"></a>
                         <ul class="sub">
                             <li><a href="MyAccount.html">My account</a></li>
-                            <li><a class="logout" href="index.html">Logout</a></li>
+                            <li><a class="logout" href="/">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -63,13 +62,12 @@
                     </li>
                     <li class="nameIn">Login: <input readonly class="inStyle" id="login" type="text" name="login"
                                                      placeholder="Login"></li>
-                        <button class="btn" id="updateBtnUser">Change info</button>
+                    <button class="btn" id="updateBtnUser">Change info</button>
                 </ul>
             </div>
 
             <div class="info" id="doctor">
                 <h1>My account: </h1>
-
                 <ul>
                     <li class="nameIn">Name: <input class="inStyle" id="nameD" type="text" name="name"
                                                     placeholder="Name"></li>
@@ -82,109 +80,19 @@
                                                           name="experience" placeholder="Experience"></li>
                     <li class="nameIn">Login: <input class="inStyle" id="categoryD" type="text" name="category"
                                                      placeholder="Category"></li>
-                        <button class="btn" id="updateBtnDoc">Change info</button>
+                    <button class="btn" id="updateBtnDoc">Change info</button>
                 </ul>
             </div>
 
             <div class="all-meetings">
                 <h1>My meetings: </h1>
-                <div class="meetings ">
+                <div class="meetings " id="meetings">
                     <!--  Some cards-->
-                    <div class="card">
-                        <ul>
-                            <li>Id: <span>1</span></li>
-                            <li>Time: <span>20:00</span></li>
-                            <li>Doctor: <span>Linus</span></li>
-                            <li>Cabinet: <span>407</span></li>
-                            <li>To pay:<span>2000</span></li>
-                            <li>
-                                <button class="red">Delete</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <ul>
-                            <li>Id: <span>2</span></li>
-                            <li>Time: <span>20:00</span></li>
-                            <li>Doctor: <span>Linus</span></li>
-                            <li>Cabinet: <span>407</span></li>
-                            <li>To pay:<span>2000</span></li>
-                            <li>
-                                <button class="red">Delete</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <ul>
-                            <li>Id: <span>3</span></li>
-                            <li>Time: <span>20:00</span></li>
-                            <li>Doctor: <span>Linus</span></li>
-                            <li>Cabinet: <span>407</span></li>
-                            <li>To pay:<span>2000</span></li>
-                            <li>
-                                <button class="red">Delete</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <ul>
-                            <li>Id: <span>4</span></li>
-                            <li>Time: <span>20:00</span></li>
-                            <li>Doctor: <span>Linus</span></li>
-                            <li>Cabinet: <span>407</span></li>
-                            <li>To pay:<span>2000</span></li>
-                            <li>
-                                <button class="red">Delete</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <ul>
-                            <li>Id: <span>5</span></li>
-                            <li>Time: <span>20:00</span></li>
-                            <li>Doctor: <span>Linus</span></li>
-                            <li>Cabinet: <span>407</span></li>
-                            <li>To pay:<span>2000</span></li>
-                            <li>
-                                <button class="red">Delete</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <ul>
-                            <li>Id: <span>6</span></li>
-                            <li>Time: <span>20:00</span></li>
-                            <li>Doctor: <span>Linus</span></li>
-                            <li>Cabinet: <span>407</span></li>
-                            <li>To pay:<span>2000</span></li>
-                            <li>
-                                <button class="red">Delete</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="card">
-                        <ul>
-                            <li>Id: <span>7</span></li>
-                            <li>Time: <span>20:00</span></li>
-                            <li>Doctor: <span>Linus</span></li>
-                            <li>Cabinet: <span>407</span></li>
-                            <li>To pay:<span>2000</span></li>
-                            <li>
-                                <button class="red">Delete</button>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
+
+    </div>
 </body>
 </html>

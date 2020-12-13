@@ -4,6 +4,7 @@ import com.medecineproject.project.dto.UserDTO;
 import com.medecineproject.project.model.Doctor;
 import com.medecineproject.project.model.LoginData;
 import com.medecineproject.project.model.User;
+import com.medecineproject.project.model.enums.Status;
 import com.medecineproject.project.service.DoctorService;
 import com.medecineproject.project.service.UserService;
 import com.medecineproject.project.service.impl.DoctorServiceImpl;
@@ -32,6 +33,7 @@ public class LoginController {
         System.out.println(userDTO);
         if (!Objects.isNull(serviceUser.readByLogin(userDTO.getLogin()))) {
             User user = serviceUser.readByLogin(userDTO.getLogin());
+            if (user.getStatus() == Status.BANNED) return 401;
             if (!user.getPassword().equals(userDTO.getPassword())) return 409;
             log.info("User {} was entered", user);
 
@@ -40,6 +42,7 @@ public class LoginController {
             return 200;
         } else if (!Objects.isNull(serviceDoctors.readByLogin(userDTO.getLogin()))) {
             Doctor doctor = serviceDoctors.readByLogin(userDTO.getLogin());
+            if (doctor.getStatus() == Status.BANNED) return 401;
             if (!doctor.getPassword().equals(userDTO.getPassword())) return 409;
             log.info("Doctor {} was entered", doctor);
 

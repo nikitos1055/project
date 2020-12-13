@@ -47,4 +47,15 @@ public class MeetingServiceImpl implements MeetingService {
     public boolean isExists(long id) {
         return rep.existsById(id);
     }
+
+    @Override
+    public Meeting readById(long id) {
+        return rep.readById(id);
+    }
+
+    @Override
+    public List<Meeting> findAllByDoctorId(long id) {
+        return rep.findAllByDoctorId(id);
+    }
+
 }

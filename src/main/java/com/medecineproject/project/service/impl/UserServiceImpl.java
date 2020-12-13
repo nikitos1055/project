@@ -48,4 +48,9 @@ public class UserServiceImpl implements UserService {
     public boolean isExists(long id) {
         return rep.existsById(id);
     }
+
+    @Override
+    public User readById(long id) {
+        return rep.readById(id);
+    }
 }

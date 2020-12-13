@@ -92,6 +92,9 @@ $(document).ready(function () {
                         window.location.href = finalUrl;
                     } else if (data === 409) {
                         alert("Password invalid.")
+                    }else if(data === 401){
+                        alert("Account is banned");
+                        return false;
                     } else {
                         alert("User do not exists.")
                     }
@@ -151,6 +154,9 @@ $(document).ready(function () {
                         }
                         finalUrl += "mainPage.html";
                         window.location.href = finalUrl;
+                    }else if(data === 401){
+                        alert("Account is banned");
+                        return false;
                     } else {
                         alert("Doctor with this login already exists.")
                     }

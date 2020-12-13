@@ -7,6 +7,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 
@@ -54,8 +55,8 @@ public class User extends LoginData {
     @Column(name = "status")
     private Status status = Status.ACTIVE;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Meeting> meetings;
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<Meeting> meetings;
 
 
     public User(String name, String surname, String login, String password) {
@@ -69,5 +70,41 @@ public class User extends LoginData {
         this.name = name;
         this.surname = surname;
         this.login = login;
+    }
+
+    public void addMeeting(Meeting meeting){
+//        meetings.add(meeting);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", role=" + role +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", status=" + status +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id &&
+                Objects.equals(name, user.name) &&
+                Objects.equals(surname, user.surname) &&
+                role == user.role &&
+                Objects.equals(login, user.login) &&
+                Objects.equals(password, user.password) &&
+                status == user.status;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, surname, role, login, password, status);
     }
 }

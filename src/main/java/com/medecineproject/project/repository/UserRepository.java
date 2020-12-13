@@ -10,4 +10,6 @@ public interface UserRepository extends JpaRepository<User, Long>,
         CrudRepository<User, Long> {
 
     User readByLogin(String login);
+
+    User readById(long id);
 }

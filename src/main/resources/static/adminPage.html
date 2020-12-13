@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/adminCss.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="js/name-surname.js"></script>
+    <script src="js/adminPage.js"></script>
+    <script src="js/FileSaver.js"></script>
+</head>
+<body>
+<div class="bg1">
+    <div class="navbar">
+        <div class="logo">
+            <span class="fa fa-ambulance"></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mainPage.html">Home</a></li>
+                <li><a href="forUserDoctors.html">Choose doctor</a></li>
+                <li><a href="aboutUs.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user">
+            <p class="name-surname"></p>
+            <ul class="primary">
+                <li>
+                    <a href="MyAccount.html" class="fa fa-user img_user"></a>
+                    <ul class="sub">
+                        <li><a href="MyAccount.html">My account</a></li>
+                        <li><a class="logout" href="/">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="social">
+            <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+            <a href="#" class="fa fa-google" aria-hidden="true"></a>
+            <a href="https://www.instagram.com/niki8ta890/?hl=uk" class="fa fa-instagram" aria-hidden="true"></a>
+        </div>
+    </div>
+
+    <!--        CABINET         -->
+    <div class="container">
+            <h1>All users: </h1>
+            <div class="meetings " id="meetings">
+                <table class="users">
+                    <thead>
+                    <tr>
+                        <th class="row-1 row-ID">ID</th>
+                        <th class="row-2 row-name">Name</th>
+                        <th class="row-3 row-login">Login</th>
+                        <th class="row-4 row-password">Password</th>
+                        <th class="row-5 row-type">Type</th>
+                        <th class="row-6 row-status">Status<th>
+                        <th class="row-7 row-ban"><th>
+                        <th class="row-8 row-unban"><th>
+                    </tr>
+                    </thead>
+                    <tbody id="body-users">
+
+                    </tbody>
+                </table>
+                <br>
+                <button id="save-btn">Save Text file</button>
+            </div>
+    </div>
+</div>
+</body>
+</html>

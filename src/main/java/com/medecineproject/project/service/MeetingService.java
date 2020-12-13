@@ -20,4 +20,7 @@ public interface MeetingService {
 
     boolean isExists(long id);
 
+    Meeting readById(long id);
+
+    List<Meeting> findAllByDoctorId(long id);
 }
