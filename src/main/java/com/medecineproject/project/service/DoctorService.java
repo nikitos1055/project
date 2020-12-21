@@ -1,7 +1,6 @@
 package com.medecineproject.project.service;
 
 import com.medecineproject.project.model.Doctor;
-import com.medecineproject.project.model.Meeting;
 
 import java.util.List;
 import java.util.Optional;

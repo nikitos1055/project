@@ -30,7 +30,6 @@ public class LoginController {
 
     @PostMapping("/login")
     public int loginDoctor(@RequestBody UserDTO userDTO, HttpServletRequest req) {
-        System.out.println(userDTO);
         if (!Objects.isNull(serviceUser.readByLogin(userDTO.getLogin()))) {
             User user = serviceUser.readByLogin(userDTO.getLogin());
             if (user.getStatus() == Status.BANNED) return 401;

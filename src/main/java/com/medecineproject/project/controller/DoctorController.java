@@ -3,6 +3,7 @@ package com.medecineproject.project.controller;
 import com.google.gson.Gson;
 import com.medecineproject.project.model.Doctor;
 import com.medecineproject.project.model.Meeting;
+import com.medecineproject.project.model.enums.Status;
 import com.medecineproject.project.service.DoctorService;
 import com.medecineproject.project.service.MeetingService;
 import lombok.extern.slf4j.Slf4j;
@@ -34,6 +35,7 @@ public class DoctorController {
     public void getAllDoctors(HttpServletResponse resp) throws IOException {
         List<Doctor> doctors = doctorService.findAll();
         doctors.remove(doctorService.readTop());
+        doctors.removeIf(d -> d.getStatus() == Status.BANNED);
 
         if (doctors.isEmpty()) log.error("No records found");
 
@@ -48,6 +50,7 @@ public class DoctorController {
         log.info("Looking for all doctors with category : {} ", category);
         List<Doctor> doctorsWithCategory = doctorService.findAllByCategory(category);
         doctorsWithCategory.remove(doctorService.readTop());
+        doctorsWithCategory.removeIf(d -> d.getStatus() == Status.BANNED);
 
         if (doctorsWithCategory.isEmpty()) {
             log.error("No records found");

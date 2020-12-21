@@ -1,6 +1,7 @@
 package com.medecineproject.project.service.impl;
 
 import com.medecineproject.project.model.Doctor;
+import com.medecineproject.project.model.enums.Status;
 import com.medecineproject.project.repository.DoctorRepository;
 import com.medecineproject.project.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +55,7 @@ public class DoctorServiceImpl implements DoctorService {
     @Override
     public Doctor readTop() {
         List<Doctor> list = findAll();
+        list.removeIf(d -> d.getStatus() == Status.BANNED);
         return list
                 .stream()
                 .max(Comparator.comparing(Doctor::getNumOfMeetingsWithPatients))

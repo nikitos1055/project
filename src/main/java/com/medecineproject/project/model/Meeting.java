@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Objects;
 
-
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 
@@ -13,24 +13,17 @@ import java.util.Objects;
 @Table(name = "meeting")
 public class Meeting {
     @Id
-    @Setter
-    @Getter
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "meeting_id", unique = true, nullable = false)
     private long id;
 
-    @Getter
     @Column(name = "meeting_time")
     private String time;
 
-    @Setter
-    @Getter
     @ManyToOne
     @JoinColumn(name = "doctor_id", referencedColumnName = "doctor_id")
     private Doctor doctor;
 
-    @Setter
-    @Getter
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private User user;
@@ -39,16 +32,6 @@ public class Meeting {
         this.time = time;
         this.doctor = doctor;
         this.user = user;
-    }
-
-    @Override
-    public String toString() {
-        return "Meeting{" +
-                "id=" + id +
-                ", time='" + time + '\'' +
-                ", doctor=" + doctor +
-                ", user=" + user +
-                '}';
     }
 
     @Override

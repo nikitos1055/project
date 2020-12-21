@@ -1,6 +1,5 @@
 package com.medecineproject.project.service;
 
-import com.medecineproject.project.model.Doctor;
 import com.medecineproject.project.model.User;
 
 import java.util.List;
